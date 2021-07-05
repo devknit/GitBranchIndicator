@@ -37,7 +37,7 @@ static class GitBranchIndicator
     }
     static void OnUpdateMainWindowTitle( ApplicationTitleDescriptor descriptor)
     {
-        descriptor.title = string.Format( "[{1} - {2}] {0}", 
+        descriptor.title = string.Format( "{1}* [{2}] {0}", 
             descriptor.title, 
             Git( "symbolic-ref --short HEAD"),
             Git( "rev-parse --short HEAD"));
